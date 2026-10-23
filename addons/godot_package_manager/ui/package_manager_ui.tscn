@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://qbitg6v76mn0"]
+
+[ext_resource type="Script" uid="uid://bi4wdjjewvtyi" path="res://addons/godot_package_manager/ui/package_manager_ui.gd" id="1"]
+
+[node name="PackageManagerUI" type="Control" unique_id=2122553818]
+custom_minimum_size = Vector2(980, 540)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="RootMargin" type="MarginContainer" parent="." unique_id=408655271]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="MainSplit" type="HSplitContainer" parent="RootMargin" unique_id=1421872304]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(-22, 9)
+split_offset = -22
+
+[node name="SourcesPanel" type="VBoxContainer" parent="RootMargin/MainSplit" unique_id=2053159004]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SourcesSplit" type="VSplitContainer" parent="RootMargin/MainSplit/SourcesPanel" unique_id=2101214501]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NpmRegistryContainer" type="VBoxContainer" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit" unique_id=1085456036]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RegistriesTitle" type="Label" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/NpmRegistryContainer" unique_id=1152532772]
+layout_mode = 2
+text = "Npm Registries"
+autowrap_mode = 3
+uppercase = true
+
+[node name="NpmRegistryToolbar" type="HBoxContainer" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/NpmRegistryContainer" unique_id=345302661]
+layout_mode = 2
+
+[node name="EditButton" type="Button" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/NpmRegistryContainer/NpmRegistryToolbar" unique_id=955503852]
+layout_mode = 2
+text = "Edit Registries
+"
+
+[node name="RefreshButton" type="Button" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/NpmRegistryContainer/NpmRegistryToolbar" unique_id=455561343]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Refresh"
+
+[node name="NpmRegistryTree" type="Tree" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/NpmRegistryContainer" unique_id=1401309659]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+column_titles_visible = true
+select_mode = 1
+
+[node name="RegistriesStatus" type="Label" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/NpmRegistryContainer" unique_id=717117554]
+layout_mode = 2
+text = "1 registries configured"
+
+[node name="OtherSourcesContainer" type="VBoxContainer" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit" unique_id=836889147]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SourcesTitle" type="Label" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer" unique_id=1422025091]
+layout_mode = 2
+text = "Other Sources"
+autowrap_mode = 3
+uppercase = true
+
+[node name="SourceToolbar" type="HBoxContainer" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer" unique_id=1268399777]
+layout_mode = 2
+
+[node name="AddButton" type="Button" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer/SourceToolbar" unique_id=588875095]
+layout_mode = 2
+text = "Add source"
+
+[node name="EditButton" type="Button" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer/SourceToolbar" unique_id=1027071479]
+layout_mode = 2
+text = "Edit"
+
+[node name="RemoveButton" type="Button" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer/SourceToolbar" unique_id=2122184485]
+layout_mode = 2
+text = "Remove"
+
+[node name="SourcesTree" type="Tree" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer" unique_id=1092469549]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+column_titles_visible = true
+select_mode = 1
+
+[node name="SourcesStatus" type="Label" parent="RootMargin/MainSplit/SourcesPanel/SourcesSplit/OtherSourcesContainer" unique_id=179302991]
+layout_mode = 2
+text = "0 source(s) configured"
+
+[node name="PackagesPanel" type="VBoxContainer" parent="RootMargin/MainSplit" unique_id=901423585]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PackagesTitle" type="Label" parent="RootMargin/MainSplit/PackagesPanel" unique_id=1234708448]
+layout_mode = 2
+text = "Compatible packages"
+uppercase = true
+
+[node name="PackageTree" type="Tree" parent="RootMargin/MainSplit/PackagesPanel" unique_id=2068015206]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="PackageStatus" type="Label" parent="RootMargin/MainSplit/PackagesPanel" unique_id=1813235941]
+layout_mode = 2
+text = "15 package(s) compatible with Godot 4.7.2"
+
+[node name="DetailsPanel" type="VBoxContainer" parent="RootMargin/MainSplit" unique_id=2126061054]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitlePanel" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel" unique_id=300848677]
+layout_mode = 2
+
+[node name="DetailsTitle" type="Label" parent="RootMargin/MainSplit/DetailsPanel/TitlePanel" unique_id=1336325217]
+layout_mode = 2
+text = "Selected package:"
+
+[node name="PackageTitle" type="Label" parent="RootMargin/MainSplit/DetailsPanel/TitlePanel" unique_id=1482726774]
+layout_mode = 2
+
+[node name="NamePanel" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel" unique_id=1150860323]
+layout_mode = 2
+
+[node name="DetailsName" type="Label" parent="RootMargin/MainSplit/DetailsPanel/NamePanel" unique_id=2088737980]
+layout_mode = 2
+text = "Name:"
+
+[node name="PackageName" type="Label" parent="RootMargin/MainSplit/DetailsPanel/NamePanel" unique_id=1884888919]
+layout_mode = 2
+
+[node name="VersionPanel" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel" unique_id=1075580849]
+layout_mode = 2
+
+[node name="DetailsVersion" type="Label" parent="RootMargin/MainSplit/DetailsPanel/VersionPanel" unique_id=1483445502]
+layout_mode = 2
+text = "Current Version:"
+
+[node name="PackageVersion" type="Label" parent="RootMargin/MainSplit/DetailsPanel/VersionPanel" unique_id=443802079]
+layout_mode = 2
+
+[node name="StatusPanel" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel" unique_id=548041276]
+layout_mode = 2
+
+[node name="DetailsStatus" type="Label" parent="RootMargin/MainSplit/DetailsPanel/StatusPanel" unique_id=1306500666]
+layout_mode = 2
+text = "Status:"
+
+[node name="PackageStatus" type="Label" parent="RootMargin/MainSplit/DetailsPanel/StatusPanel" unique_id=1635519299]
+layout_mode = 2
+
+[node name="PackageTabs" type="TabContainer" parent="RootMargin/MainSplit/DetailsPanel" unique_id=1371472956]
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 2
+
+[node name="Versions" type="Tree" parent="RootMargin/MainSplit/DetailsPanel/PackageTabs" unique_id=600088418]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+column_titles_visible = true
+select_mode = 1
+metadata/_tab_index = 0
+
+[node name="Dependencies" type="Tree" parent="RootMargin/MainSplit/DetailsPanel/PackageTabs" unique_id=445902162]
+visible = false
+layout_mode = 2
+columns = 3
+column_titles_visible = true
+select_mode = 1
+metadata/_tab_index = 1
+
+[node name="Description" type="RichTextLabel" parent="RootMargin/MainSplit/DetailsPanel/PackageTabs" unique_id=1875962417]
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ActionToolbar" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel" unique_id=404827332]
+layout_mode = 2
+
+[node name="Version" type="VBoxContainer" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar" unique_id=565974888]
+layout_mode = 2
+
+[node name="VersionDisplayPanel" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar/Version" unique_id=245343273]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar/Version/VersionDisplayPanel" unique_id=1719315950]
+layout_mode = 2
+text = "Selected Version:"
+
+[node name="Version" type="Label" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar/Version/VersionDisplayPanel" unique_id=503103377]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar/Version" unique_id=980482621]
+layout_mode = 2
+
+[node name="InstallButton" type="Button" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar/Version/Buttons" unique_id=1676557328]
+layout_mode = 2
+disabled = true
+text = "Install / Update"
+
+[node name="RemoveButton" type="Button" parent="RootMargin/MainSplit/DetailsPanel/ActionToolbar/Version/Buttons" unique_id=1726596040]
+layout_mode = 2
+disabled = true
+text = "Remove"

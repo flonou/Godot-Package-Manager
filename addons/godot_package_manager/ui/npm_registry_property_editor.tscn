@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://xhxedpo41rub"]
+
+[node name="NpmRegistryPropertyEditor" type="VBoxContainer" unique_id=322660226]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Toolbar" type="HBoxContainer" parent="." unique_id=1950123169]
+layout_mode = 2
+
+[node name="AddButton" type="Button" parent="Toolbar" unique_id=782705409]
+layout_mode = 2
+text = "Add"
+
+[node name="EditButton" type="Button" parent="Toolbar" unique_id=754353583]
+layout_mode = 2
+text = "Edit"
+
+[node name="RemoveButton" type="Button" parent="Toolbar" unique_id=1004129472]
+layout_mode = 2
+text = "Remove"
+
+[node name="RegistryTree" type="Tree" parent="." unique_id=200458358]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+column_titles_visible = true
+select_mode = 1
+
+[node name="StatusLabel" type="Label" parent="." unique_id=1900133976]
+layout_mode = 2
+text = "0 registry(s) configured"
+
+[node name="Form" type="GridContainer" parent="." unique_id=1589438092]
+layout_mode = 2
+columns = 2
+
+[node name="NameLabel" type="Label" parent="Form" unique_id=679068352]
+layout_mode = 2
+text = "Name"
+
+[node name="NameEdit" type="LineEdit" parent="Form" unique_id=1975394144]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "My registry"
+
+[node name="URLLabel" type="Label" parent="Form" unique_id=338698288]
+layout_mode = 2
+text = "URL"
+
+[node name="URLEdit" type="LineEdit" parent="Form" unique_id=1432034467]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "https://registry.example.com"
+
+[node name="ScopesLabel" type="Label" parent="Form" unique_id=526759192]
+layout_mode = 2
+text = "Scopes"
+
+[node name="ScopesEdit" type="LineEdit" parent="Form" unique_id=1727797593]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "company.,team."
+
+[node name="Buttons" type="HBoxContainer" parent="Form" unique_id=1822412549]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="Form/Buttons" unique_id=2129012167]
+layout_mode = 2
+text = "Save"
+
+[node name="CancelButton" type="Button" parent="Form/Buttons" unique_id=1613467042]
+layout_mode = 2
+text = "Cancel"
